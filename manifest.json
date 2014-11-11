@@ -1,0 +1,18 @@
+{
+  "name": "Link to Element",
+  "description": "Easily send and receive direct links to any section within an HTML page.",
+  "version": "0.2",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["context-menu.js"]
+  },
+  "icons": { "128": "link-to-element.png"},
+  "content_scripts": [ {
+    "exclude_globs":    [  ],
+    "include_globs":    [ "*" ],
+    "js":               ["jquery.min.js", "jquery.scrollto.min.js","jquery.xpath.js", "link-to-element.js" ],
+    "matches":          [ "http://*/*", "https://*/*" ]
+  } ],
+  
+  "manifest_version": 2
+}
